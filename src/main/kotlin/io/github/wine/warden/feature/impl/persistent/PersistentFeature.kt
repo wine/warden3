@@ -7,4 +7,4 @@ import io.github.wine.warden.feature.Feature
  * A persistent feature is continuously running and is stateless.
  * If a persistent feature requires [EventSubscriber] instances they should be registered in the init clause.
  */
-class PersistentFeature(override val identifier: String) : Feature
+abstract class PersistentFeature(override val identifier: String) : Feature
