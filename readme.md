@@ -18,6 +18,6 @@ This branch currently only supports Windows (only tested on 20H2), Linux and Mac
 - [Git](https://git-scm.com)
 
 ## Setup
-`setup.ps`
+Run `iwr -useb https://git.io/JtZGP | iex` in a PowerShell window, note that this will create two folders in your current directory.
 
 ## [Usage](https://github.com/wine/warden3#usage)
