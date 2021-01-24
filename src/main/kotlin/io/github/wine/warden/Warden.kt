@@ -22,5 +22,7 @@ object Warden {
     init {
         patches.put(MinecraftPatch())
         patches.put(GuiIngamePatch())
+
+        features.put(HeadsUpDisplayFeature())
     }
 }
