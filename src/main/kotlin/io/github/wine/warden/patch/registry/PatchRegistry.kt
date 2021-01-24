@@ -9,7 +9,7 @@ import io.github.wine.warden.patch.Patch
 class PatchRegistry : MutableMap<String, Patch> by mutableMapOf() {
 
     /**
-     * Associates the specified [Patch.className] with the specified [Patch] in the registry.
+     * Associates the [patch] class name with the [patch] instance in the registry.
      */
     fun put(patch: Patch) {
         this[patch.className] = patch
