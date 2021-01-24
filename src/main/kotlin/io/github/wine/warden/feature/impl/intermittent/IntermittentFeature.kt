@@ -12,8 +12,8 @@ import io.github.wine.warden.event.bus.EventSubscriber
  */
 abstract class IntermittentFeature(override val identifier: String) : Feature {
 
-    private var state = false
-    set(value) {
+    var state = false
+    private set(value) {
         if (value) {
             onEnable()
         }
