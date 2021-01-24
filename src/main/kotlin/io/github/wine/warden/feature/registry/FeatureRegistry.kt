@@ -1,4 +1,4 @@
-package io.github.wine.warden.feature.impl.registry
+package io.github.wine.warden.feature.registry
 
 import io.github.wine.warden.feature.Feature
 
