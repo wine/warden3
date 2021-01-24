@@ -35,6 +35,8 @@ class Transformer : ClassFileTransformer {
 
                 // invoke injections method (e.g the method that patches the method node)
                 it.invoke(patch, methodNode)
+
+                println("Patched $name#${injection.method}")
             }
 
         return classNode.toByteArray()
