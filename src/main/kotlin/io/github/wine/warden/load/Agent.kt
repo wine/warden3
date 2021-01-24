@@ -12,6 +12,7 @@ import java.lang.instrument.ClassFileTransformer
  * that has the ability to modify classes while they're being loaded into the classpath.
  */
 fun premain(arguments: String?, instrumentation: Instrumentation) {
+    // Calls the init clause in the Warden singleton
     Warden
 
     instrumentation.addTransformer(Transformer())
