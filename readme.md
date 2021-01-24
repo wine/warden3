@@ -20,7 +20,7 @@ guaranteed to be fixed.
     * `recompile.bat` (Windows) or `./recompile.sh` (Linux/Mac)
     * Create a zip archive with **all** the files under `MCP_DIRECTORY/bin/minecraft`
     * Rename said zip archive to `Minecraft-debof.jar`
-    * Put the de-obfuscated Minecraft jar under `WARDEN_DIRECTORY/libs`, you should now have a jar that looks something like this:
+    * Put the de-obfuscated Minecraft jar under `WARDEN_DIRECTORY/libs`, you should now have a jar that looks like this:
     
     ![Example](res/deobf-example.png)
 * Build the project
