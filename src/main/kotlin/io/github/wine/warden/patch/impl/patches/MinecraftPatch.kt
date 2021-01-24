@@ -14,8 +14,6 @@ class MinecraftPatch : ClassPatch("net/minecraft/src/Minecraft") {
 
     @Inject("runTick", "()V")
     fun patchRunTick(methodNode: MethodNode) {
-        println("MinecraftPatch#patchRunTick")
-
         methodNode.instructions.insert(
             MethodInsnNode(
                 INVOKESTATIC,

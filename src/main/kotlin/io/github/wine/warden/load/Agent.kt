@@ -12,8 +12,6 @@ import java.lang.instrument.ClassFileTransformer
  * that has the ability to modify classes while they're being loaded into the classpath.
  */
 fun premain(arguments: String?, instrumentation: Instrumentation) {
-    println("WardenTransformer#premain")
-
     Warden
 
     instrumentation.addTransformer(Transformer())

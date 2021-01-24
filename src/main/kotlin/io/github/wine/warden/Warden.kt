@@ -15,8 +15,6 @@ object Warden {
     val bus = EventBus()
 
     init {
-        println("Warden#init")
-
         patches.put(MinecraftPatch())
     }
 }
