@@ -1,6 +1,7 @@
 package io.github.wine.warden
 
 import io.github.wine.warden.event.bus.EventBus
+import io.github.wine.warden.feature.impl.registry.FeatureRegistry
 import io.github.wine.warden.patch.impl.patches.MinecraftPatch
 import io.github.wine.warden.patch.registry.PatchRegistry
 
@@ -11,8 +12,10 @@ import io.github.wine.warden.patch.registry.PatchRegistry
  */
 object Warden {
 
-    val patches = PatchRegistry()
     val bus = EventBus()
+
+    val patches = PatchRegistry()
+    val features = FeatureRegistry()
 
     init {
         patches.put(MinecraftPatch())
