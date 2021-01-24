@@ -11,6 +11,5 @@ cd ..
 
 git clone https://github.com/wine/warden3
 cd .\warden3\
-mkdir libs
 Copy-Item -Path ..\mcp\bin\Minecraft-deobf.jar .\libs\Minecraft-deobf.jar
 .\gradlew.bat build
