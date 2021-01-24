@@ -15,6 +15,8 @@ guaranteed to be fixed.
 - [Git](https://git-scm.com) (optional)
 
 ## Setup
+For an easier setup see the [orchestration](https://github.com/wine/warden3/tree/orchestration) branch.
+
 * Decompile and recompile Minecraft using MCP
     * `decompile.bat` (Windows) or `./decompile.sh` (Linux/Mac)
     * `recompile.bat` (Windows) or `./recompile.sh` (Linux/Mac)
