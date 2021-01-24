@@ -21,6 +21,7 @@ guaranteed to be fixed.
     * Create a zip archive with **all** the files under `MCP_DIRECTORY/bin/minecraft`
     * Rename said zip archive to `Minecraft-debof.jar`
     * Put the de-obfuscated Minecraft jar under `WARDEN_DIRECTORY/libs`, you should now have a jar that looks something like this:
+    
     ![Example](res/deobf-example.png)
 * Build the project
     * `gradlew.bat build` (Windows) or `./gradlew build` (Linux/Mac)
@@ -31,6 +32,7 @@ guaranteed to be fixed.
 * Under version click "Replace Minecraft.jar" and select your de-obfuscated Minecraft jar
 * Under settings turn on the "Java arguments" checkbox
   * Add the line `-javaagent:path/to/your/warden/uber.jar`, your settings page should now look like this:
+  
   ![Example](res/multimc-example.png)
 
 That's it, you can now launch the game and Warden will be loaded.
