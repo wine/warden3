@@ -7,7 +7,13 @@ class EventPublisher<T : Event> {
     private val subscribers = mutableListOf<EventSubscriber<T>>()
 
     fun publish(event: T) {
-        subscribers.forEach { it.onPublish(event) }
+        subscribers.forEach {
+            try {
+                it.onPublish(event)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
     }
 
     fun subscribe(subscriber: EventSubscriber<T>) {
