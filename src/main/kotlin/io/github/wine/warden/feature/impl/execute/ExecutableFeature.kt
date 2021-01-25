@@ -14,11 +14,10 @@ abstract class ExecutableFeature(override val identifier: String) : Feature {
         if (event.identifier == identifier) {
             try {
                 execute(event.arguments)
-            } catch(e: ShowHelpException) {
-                val help = StringWriter().apply { e.printUserMessage(this, identifier, 60) }.toString().split("\n")
-                help.forEach(Minecraft.getMinecraft().ingameGUI.chatGUI::printChatMessage)
-            } catch (e: Exception) {
-                Minecraft.getMinecraft().ingameGUI.chatGUI.printChatMessage(e.localizedMessage)
+            } catch(exception: ShowHelpException) {
+                exception.printToMinecraft(identifier)
+            } catch (exception: Exception) {
+                exception.printToMinecraft()
             }
         }
     }
