@@ -6,6 +6,7 @@ import io.github.wine.warden.feature.impl.intermittent.IntermittentFeature
 import io.github.wine.warden.feature.impl.intermittent.features.SprintFeature
 import io.github.wine.warden.feature.impl.persistent.features.HeadsUpDisplayFeature
 import io.github.wine.warden.feature.registry.FeatureRegistry
+import io.github.wine.warden.patch.impl.patches.AbstractClientPlayerPatch
 import io.github.wine.warden.patch.impl.patches.EntityClientPlayerMPPatch
 import io.github.wine.warden.patch.impl.patches.GuiIngamePatch
 import io.github.wine.warden.patch.impl.patches.MinecraftPatch
@@ -26,6 +27,7 @@ object Warden {
     init {
         patches.put(MinecraftPatch())
         patches.put(GuiIngamePatch())
+        patches.put(AbstractClientPlayerPatch())
         patches.put(EntityClientPlayerMPPatch())
 
         features.put(ToggleFeature())
