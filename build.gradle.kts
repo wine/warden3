@@ -13,6 +13,7 @@ dependencies {
     implementation(kotlin("stdlib"))
 
     implementation("org.ow2.asm:asm-all:5.2")
+    implementation("com.xenomachina:kotlin-argparser:2.0.7")
 
     compileOnly(files("$projectDir/libs/Minecraft-deobf.jar"))
 }
