@@ -9,7 +9,7 @@ import net.minecraft.src.EntityClientPlayerMP
 class SprintFeature : IntermittentFeature("sprint") {
 
     /**
-     * todo: replace [TickEvent] with an event published from the players movement logic method.
+     * To be replaced with an event published from the players movement logic method.
      */
     private val tickSubscriber = EventSubscriber<TickEvent> {
         it.game.thePlayer.isSprinting = it.game.thePlayer.canNormallySprint()
