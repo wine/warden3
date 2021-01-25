@@ -10,7 +10,7 @@ import org.objectweb.asm.tree.*
 
 class EntityClientPlayerMPPatch : ClassPatch("net/minecraft/src/EntityClientPlayerMP") {
 
-    @Inject("sendChatMessage", "(Ljava/lang/String;)V")
+    @Inject("sendChatMessage")
     fun patchSendChatMessage(methodNode: MethodNode) {
         val instructions = InsnList()
 

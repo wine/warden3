@@ -8,7 +8,7 @@ import org.objectweb.asm.tree.*
 
 class AbstractClientPlayerPatch : ClassPatch("net/minecraft/src/AbstractClientPlayer") {
 
-    @Inject("getSkinUrl", "(Ljava/lang/String;)Ljava/lang/String;")
+    @Inject("getSkinUrl")
     fun patchGetSkinUrl(methodNode: MethodNode) {
         val instructions = InsnList()
 

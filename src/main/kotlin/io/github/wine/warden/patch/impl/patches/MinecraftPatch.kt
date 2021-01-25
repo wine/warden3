@@ -11,7 +11,7 @@ import org.objectweb.asm.tree.MethodNode
 
 class MinecraftPatch : ClassPatch("net/minecraft/src/Minecraft") {
 
-    @Inject("runTick", "()V")
+    @Inject("runTick")
     fun patchRunTick(methodNode: MethodNode) {
         methodNode.instructions.insert(
             MethodInsnNode(

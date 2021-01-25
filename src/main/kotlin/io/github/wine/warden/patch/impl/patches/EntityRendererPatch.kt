@@ -12,7 +12,7 @@ import org.objectweb.asm.tree.MethodNode
 
 class EntityRendererPatch : ClassPatch("net/minecraft/src/EntityRenderer") {
 
-    @Inject("renderWorld", "(FJ)V")
+    @Inject("renderWorld")
     fun patchRenderWorld(methodNode: MethodNode) {
         methodNode.instructions.insertBefore(
             methodNode.findLdcInstruction("hand")?.next,

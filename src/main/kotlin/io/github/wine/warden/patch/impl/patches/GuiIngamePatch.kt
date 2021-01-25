@@ -12,7 +12,7 @@ import org.objectweb.asm.tree.MethodNode
 
 class GuiIngamePatch : ClassPatch("net/minecraft/src/GuiIngame") {
 
-    @Inject("renderGameOverlay", "(FZII)V")
+    @Inject("renderGameOverlay")
     fun patchRenderGameOverlay(methodNode: MethodNode) {
         methodNode.insertInstructionBeforeReturn(
             MethodInsnNode(
