@@ -1,6 +1,8 @@
 package io.github.wine.warden
 
 import io.github.wine.warden.event.bus.EventBus
+import io.github.wine.warden.feature.impl.intermittent.IntermittentFeature
+import io.github.wine.warden.feature.impl.intermittent.features.SprintFeature
 import io.github.wine.warden.feature.impl.persistent.features.HeadsUpDisplayFeature
 import io.github.wine.warden.feature.registry.FeatureRegistry
 import io.github.wine.warden.patch.impl.patches.GuiIngamePatch
@@ -24,5 +26,6 @@ object Warden {
         patches.put(GuiIngamePatch())
 
         features.put(HeadsUpDisplayFeature())
+        features.put(SprintFeature())
     }
 }
