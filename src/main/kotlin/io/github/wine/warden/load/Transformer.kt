@@ -22,6 +22,8 @@ class Transformer : ClassFileTransformer {
         // return the original buffer.
         val patch = Warden.patches[name] ?: return buffer
 
+        println("Found class patch for $name")
+
         val classNode = buffer.toClassNode()
 
         patch.javaClass.declaredMethods
