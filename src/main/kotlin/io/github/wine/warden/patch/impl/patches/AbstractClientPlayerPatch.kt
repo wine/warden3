@@ -28,6 +28,10 @@ class AbstractClientPlayerPatch : ClassPatch("net/minecraft/src/AbstractClientPl
         // Return the String from getSkinUrl
         instructions.add(InsnNode(ARETURN))
 
+        // Remove previous instructions since
+        // they will never be called anyways
+        methodNode.instructions.clear()
+
         methodNode.instructions.insert(instructions)
     }
 
