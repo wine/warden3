@@ -17,7 +17,7 @@ fun ClassNode.getMethodNode(method: String, descriptor: String): MethodNode {
     return this.methods
         .map { it as MethodNode }
         .filter { it.name == method }
-        .first { it.desc == descriptor }
+        .first { it.desc == descriptor || descriptor == "" }
 }
 
 fun ClassNode.toByteArray(): ByteArray {

@@ -13,5 +13,5 @@ import org.objectweb.asm.tree.MethodNode
 @Target(AnnotationTarget.FUNCTION)
 annotation class Inject(
     val method: String,
-    val descriptor: String
+    val descriptor: String = ""
 )
