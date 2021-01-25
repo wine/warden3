@@ -4,7 +4,6 @@ import io.github.wine.warden.Warden
 import io.github.wine.warden.event.impl.game.events.TickEvent
 import io.github.wine.warden.patch.annotate.Inject
 import io.github.wine.warden.patch.impl.ClassPatch
-import net.minecraft.src.Minecraft
 import org.objectweb.asm.Opcodes.INVOKESTATIC
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.MethodInsnNode

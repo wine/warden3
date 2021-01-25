@@ -2,7 +2,6 @@ package io.github.wine.warden
 
 import io.github.wine.warden.event.bus.EventBus
 import io.github.wine.warden.feature.impl.execute.features.ToggleFeature
-import io.github.wine.warden.feature.impl.intermittent.IntermittentFeature
 import io.github.wine.warden.feature.impl.intermittent.features.SprintFeature
 import io.github.wine.warden.feature.impl.persistent.features.HeadsUpDisplayFeature
 import io.github.wine.warden.feature.registry.FeatureRegistry

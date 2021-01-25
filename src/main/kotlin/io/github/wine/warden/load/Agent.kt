@@ -1,8 +1,8 @@
 package io.github.wine.warden.load
 
 import io.github.wine.warden.Warden
-import java.lang.instrument.Instrumentation
 import java.lang.instrument.ClassFileTransformer
+import java.lang.instrument.Instrumentation
 
 /**
  * After the JVM has initialized each agent's premain method is invoked
