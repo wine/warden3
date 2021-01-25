@@ -25,7 +25,10 @@ object Warden {
         patches.put(MinecraftPatch())
         patches.put(GuiIngamePatch())
 
+        features.put(ToggleFeature())
+
         features.put(HeadsUpDisplayFeature())
+
         features.put(SprintFeature())
     }
 }
