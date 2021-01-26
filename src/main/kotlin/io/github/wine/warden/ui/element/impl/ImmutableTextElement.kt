@@ -5,7 +5,7 @@ import io.github.wine.warden.ui.position.Position
 import net.minecraft.src.FontRenderer
 import java.awt.Color
 
-class ImmutableTextElement(override val position: Position, private val text: String, private val color: Int = Color.WHITE.rgb) :
+open class ImmutableTextElement(override val position: Position, private val text: String, private val color: Int = Color.WHITE.rgb) :
     Element {
 
     override fun render(fontRenderer: FontRenderer) {
