@@ -26,6 +26,7 @@ object Warden {
         patches.put(AbstractClientPlayerPatch())
         patches.put(EntityClientPlayerMPPatch())
         patches.put(EntityRendererPatch())
+        patches.put(TcpConnectionPatch())
 
         features.put(ToggleFeature())
 
