@@ -4,6 +4,7 @@ import io.github.wine.warden.event.bus.EventBus
 import io.github.wine.warden.feature.impl.execute.features.ToggleFeature
 import io.github.wine.warden.feature.impl.intermittent.features.SprintFeature
 import io.github.wine.warden.feature.impl.persistent.features.HeadsUpDisplayFeature
+import io.github.wine.warden.feature.impl.persistent.features.PreventBadPacketsFeature
 import io.github.wine.warden.feature.registry.FeatureRegistry
 import io.github.wine.warden.patch.impl.patches.*
 import io.github.wine.warden.patch.registry.PatchRegistry
@@ -31,6 +32,7 @@ object Warden {
         features.put(ToggleFeature())
 
         features.put(HeadsUpDisplayFeature())
+        features.put(PreventBadPacketsFeature())
 
         features.put(SprintFeature())
     }
