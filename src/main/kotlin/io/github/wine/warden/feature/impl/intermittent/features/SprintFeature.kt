@@ -11,8 +11,8 @@ class SprintFeature : IntermittentFeature("sprint") {
     /**
      * To be replaced with an event published from the players movement logic method.
      */
-    private val tickSubscriber = EventSubscriber<TickEvent> {
-        it.game.thePlayer.isSprinting = it.game.thePlayer.canNormallySprint()
+    private val tickSubscriber = EventSubscriber<TickEvent> { event ->
+        event.game.thePlayer.isSprinting = event.game.thePlayer.canNormallySprint()
     }
 
     override fun onEnable() {

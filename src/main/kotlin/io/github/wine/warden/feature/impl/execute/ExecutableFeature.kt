@@ -8,10 +8,10 @@ import io.github.wine.warden.feature.Feature
 
 abstract class ExecutableFeature(override val identifier: String) : Feature {
 
-    private val executeCommandSubscriber = EventSubscriber<ExecuteCommandEvent> {
-        if (it.identifier == identifier) {
+    private val executeCommandSubscriber = EventSubscriber<ExecuteCommandEvent> { event ->
+        if (event.identifier == identifier) {
             try {
-                execute(it.arguments)
+                execute(event.arguments)
             } catch(exception: ShowHelpException) {
                 exception.printToMinecraft(identifier)
             } catch (exception: Exception) {
