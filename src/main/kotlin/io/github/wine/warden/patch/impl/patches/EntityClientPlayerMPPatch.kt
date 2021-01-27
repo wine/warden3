@@ -2,6 +2,7 @@ package io.github.wine.warden.patch.impl.patches
 
 import io.github.wine.warden.Warden
 import io.github.wine.warden.event.impl.client.ExecuteCommandEvent
+import io.github.wine.warden.event.impl.game.events.UpdateEvent
 import io.github.wine.warden.patch.annotate.Inject
 import io.github.wine.warden.patch.impl.ClassPatch
 import org.objectweb.asm.Opcodes.*
@@ -38,6 +39,19 @@ class EntityClientPlayerMPPatch : ClassPatch("net/minecraft/src/EntityClientPlay
         methodNode.instructions.insert(instructions)
     }
 
+    @Inject("onUpdate")
+    fun patchOnUpdate(methodNode: MethodNode) {
+        methodNode.instructions.insert(
+            MethodInsnNode(
+                INVOKESTATIC,
+                Type.getInternalName(this.javaClass),
+                "onUpdate",
+                "()V",
+                false
+            )
+        )
+    }
+
     companion object {
         @JvmStatic
         fun sendChatMessage(string: String): Boolean {
@@ -51,6 +65,11 @@ class EntityClientPlayerMPPatch : ClassPatch("net/minecraft/src/EntityClientPlay
             }
 
             return false
+        }
+
+        @JvmStatic
+        fun onUpdate() {
+            Warden.bus.publish(UpdateEvent())
         }
     }
 }
