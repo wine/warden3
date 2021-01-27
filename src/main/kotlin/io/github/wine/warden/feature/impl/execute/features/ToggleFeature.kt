@@ -1,6 +1,7 @@
 package io.github.wine.warden.feature.impl.execute.features
 
 import com.xenomachina.argparser.ArgParser
+import com.xenomachina.argparser.InvalidArgumentException
 import io.github.wine.warden.feature.impl.execute.ExecutableFeature
 import io.github.wine.warden.feature.impl.execute.printToMinecraft
 import io.github.wine.warden.feature.impl.execute.transform.toIntermittentFeature
@@ -20,7 +21,7 @@ class ToggleFeature : ExecutableFeature("toggle") {
 
     private class ToggleArguments(parser: ArgParser) {
         val feature by parser.positional("TARGET", "identifier of the target intermittent feature") {
-            toIntermittentFeature()
+            toIntermittentFeature() ?: throw InvalidArgumentException("Intermittent feature with the identifier '$this' could not be located")
         }
     }
 }
