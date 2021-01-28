@@ -2,6 +2,7 @@
 
 [![Discord](https://img.shields.io/discord/802950175097356309?label=discord&style=flat-square)](https://discord.gg/jgsyEhcx9T)
 [![License](https://img.shields.io/github/license/wine/warden3?style=flat-square)](https://github.com/wine/warden3/blob/main/license.md)
+[![CodeFactor](https://www.codefactor.io/repository/github/wine/warden3/badge/main)](https://www.codefactor.io/repository/github/wine/warden3/overview/main)
 
 Warden³ is an open-source continuation of Warden² (now discontinued), it will remain free and
 open-source in-definitively. There are absolutely no (and never will be) any promises of compatibility
