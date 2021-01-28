@@ -15,7 +15,6 @@ class Transformer : ClassFileTransformer {
         buffer: ByteArray?
     ): ByteArray {
         // ensure buffer is not null
-        // todo: returns null
         buffer ?: return buffer!!
 
         // find patch, if it's not found just (e.g there is no patch for the class)

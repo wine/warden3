@@ -8,7 +8,7 @@ import io.github.wine.warden.feature.impl.intermittent.IntermittentFeature
 import net.minecraft.src.EntityClientPlayerMP
 
 class SprintFeature : IntermittentFeature("sprint") {
-    
+
     private val tickSubscriber = EventSubscriber<UpdateEvent> { event ->
         event.game.thePlayer.isSprinting = event.game.thePlayer.canNormallySprint()
     }
