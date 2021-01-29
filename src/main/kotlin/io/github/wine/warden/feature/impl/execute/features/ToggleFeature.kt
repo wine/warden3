@@ -6,7 +6,7 @@ import io.github.wine.warden.feature.impl.execute.ExecutableFeature
 import io.github.wine.warden.feature.impl.execute.printToMinecraft
 import io.github.wine.warden.feature.impl.execute.transform.toIntermittentFeature
 
-class ToggleFeature : ExecutableFeature("toggle") {
+class ToggleFeature : ExecutableFeature("toggle", "t") {
 
     override fun execute(arguments: Array<String>) {
         ArgParser(arguments).parseInto(::ToggleArguments).run {
