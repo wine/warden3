@@ -6,10 +6,12 @@ import io.github.wine.warden.event.bus.EventSubscriber
 import io.github.wine.warden.event.impl.client.ExecuteCommandEvent
 import io.github.wine.warden.feature.Feature
 
-abstract class ExecutableFeature(override val identifier: String) : Feature {
+abstract class ExecutableFeature(vararg identifiers: String) : Feature {
+
+    override val identifier = identifiers.first()
 
     private val executeCommandSubscriber = EventSubscriber<ExecuteCommandEvent> { event ->
-        if (event.identifier == identifier) {
+        if (event.identifier in identifiers) {
             try {
                 execute(event.arguments)
             } catch(exception: ShowHelpException) {
