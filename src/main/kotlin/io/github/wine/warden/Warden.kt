@@ -1,6 +1,8 @@
 package io.github.wine.warden
 
 import io.github.wine.warden.event.bus.EventBus
+import io.github.wine.warden.event.bus.EventSubscriber
+import io.github.wine.warden.event.impl.game.events.StartGameEvent
 import io.github.wine.warden.feature.impl.execute.features.ToggleFeature
 import io.github.wine.warden.feature.impl.intermittent.features.SprintFeature
 import io.github.wine.warden.feature.impl.persistent.features.HeadsUpDisplayFeature
@@ -29,11 +31,13 @@ object Warden {
         patches.put(EntityRendererPatch())
         patches.put(TcpConnectionPatch())
 
-        features.put(ToggleFeature())
+        bus.subscribe(EventSubscriber<StartGameEvent> {
+            features.put(ToggleFeature())
 
-        features.put(HeadsUpDisplayFeature())
-        features.put(PreventBadPacketsFeature())
+            features.put(HeadsUpDisplayFeature())
+            features.put(PreventBadPacketsFeature())
 
-        features.put(SprintFeature())
+            features.put(SprintFeature())
+        })
     }
 }
